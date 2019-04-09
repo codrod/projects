@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sprite Framework Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            .background
+            {
+                position: relative;
+            }
+            .background div
+            {
+                position: absolute;
+            }
+            #basicBG
+            {
+                background-color: lightgreen;
+            }
+            body
+            {
+                background-color: lightgray;
+                margin:5%;
+            }
+            #redBall
+            {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                border-radius: 50%;
+            }
+            #blueBall
+            {
+                width: 50px;
+                height: 50px;
+                background-color: blue;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Street Walker 3</h2>
+        <div id="SW3BG"></div>
+        <h3>Controls:</h3>
+        <ul>
+            <li>
+                Cop:
+                <ul>
+                    <li>F: move left</li>
+                    <li>H: move right</li>
+                    <li>Click: move right</li>
+                </ul>
+            </li>
+            <li>
+                Guy:
+                <ul>
+                    <li>J: move left</li>
+                    <li>L: move right</li>
+                    <li>Click: move left</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Basic Example</h2>
+        <div id="basicBG"></div>
+        <h3>Controls:</h3>
+        <ul>
+            <li>W: move up</li>
+            <li>S: move down</li>
+            <li>A: move left</li>
+            <li>D: move right</li>
+        </ul>
+        <p>
+            Note: You must click on (select) the ball before you can move it with the arrow keys. You can also
+            move the cop and guy in the background above if they are selected.
+        </p>
+
+        <script src="framework.js"></script>
+        <script>
+            "use strict";
+
+            var spriteFW = makeSSF();
+
+            //These are just constants
+            var tfghKeyPad = [
+                {direction:spriteFW.directions.right, keyCode:72},
+                {direction:spriteFW.directions.left, keyCode:70}
+            ];
+            var ijklKeyPad = [
+                {direction:spriteFW.directions.right, keyCode:76},
+                {direction:spriteFW.directions.left, keyCode:74}
+            ];
+            var wasdKeyPad = [
+                {direction:spriteFW.directions.right, keyCode:68},
+                {direction:spriteFW.directions.left, keyCode:65},
+                {direction:spriteFW.directions.up, keyCode:87},
+                {direction:spriteFW.directions.down, keyCode:83}
+            ];
+
+            //I put the code in these functions so you can clearly see the difference in complexity between the two.
+            //These functions do not share any common setup code.
+            StreetWalker3();
+            BasicExample();
+
+            function BasicExample()
+            {
+                //Absolute minimum constructors
+                var basicBG = spriteFW.Background({id:"basicBG"});
+
+                //A sprite may not have any animations. In such a case it must be styled by CSS
+                var redBall = basicBG.makeSprite({id:"redBall", zIndex:1});
+                var blueBall = basicBG.makeSprite({id:"blueBall", zIndex:2});
+
+                //Seperate the balls so they are both visible
+                basicBG.pushToRight(blueBall);
+
+                //This animator will apply to the currently selected Sprite in any Background
+                spriteFW.selectedSprite.addAnimator(new spriteFW.Animator.KeyPad({shift:10, waitTime:100, keyTable:wasdKeyPad}));
+
+                return;
+            }
+
+            function StreetWalker3()
+            {
+                var SW3BG = spriteFW.Background({
+                    parent: document.body,
+                    id:"SW3BG",
+                    className:"background",
+                    image:"url(pics/background.png)",
+                    height:385,
+                    width:1000,
+                    floor:325
+                });
+
+                var cop = SW3BG.makeSprite({
+                    id:"cop",
+                    zIndex:1,
+                    idle: {
+                        file:"url(pics/agent.png)",
+                        height:80,
+                        width:80,
+                        pose:[["0px 0px"], ["-1200px 0px"], ["0px 0px"], ["-1200px 0px"]]
+                    }
+                });
+
+                var guy = SW3BG.makeSprite({
+                    id:"guy",
+                    zIndex:2,
+                    idle: {
+                        file:"url(pics/guy.png)",
+                        height:60,
+                        width:60,
+                        pose:[["0px -193px"], ["0px -65px"], ["0px 0px"], ["-120px 0px"]]
+                    }
+                });
+
+                //The pose variable is a two dimensional array of background positions ("0px 0px") for each direction.
+                //The first index determines the direction and the second index determines the frame or pose.
+                //The genRegPoses() function just generates an pose array for an equaly spaced row or column
+                //in a sprite-set file; it is only used for simplicity and is not required.
+                cop.addAnimation({
+                    name:"move", file:"url(pics/agent.png)", height:80, width:80,
+                    pose:[spriteFW.genRegPoses({length:6, shiftX:-80, initialY:-100}),
+                          spriteFW.genRegPoses({length:6, initialX:-1200, shiftX:80, initialY:-100})]
+                });
+
+                guy.addAnimation({
+                    name:"move", file:"url(pics/guy.png)", height:60, width:60,
+                    pose:[spriteFW.genRegPoses({length:9, shiftX:-65, initialY:-193}),
+                          spriteFW.genRegPoses({length:9, shiftX:-65, initialY:-65})]
+                });
+
+                //This should be pretty obivous
+                SW3BG.dropOnFloor(cop);
+                SW3BG.dropOnFloor(guy);
+                SW3BG.pushToRight(guy);
+                guy.setDirection(spriteFW.directions.left);
+
+                //An on-click animator is attached to the sprite itself
+                cop.addAnimator(new spriteFW.Animator.OnClick({
+                    name:"click",
+                    shift:10,
+                    direction:spriteFW.directions.right
+                }));
+                guy.addAnimator(new spriteFW.Animator.OnClick({
+                    name:"click",
+                    shift:10,
+                    direction:spriteFW.directions.left
+                }));
+
+                //Any animator that detects key presses cannot be attached to a sprite directly.
+                //spriteFW.global is used to fill this gap and the subject of the animator is
+                //specified as an argument.
+                spriteFW.global.addAnimator(new spriteFW.Animator.KeyPad({
+                    sprite:cop,
+                    name:"keypad",
+                    shift:10,
+                    waitTime:100,
+                    keyTable:tfghKeyPad
+                }));
+
+                spriteFW.global.addAnimator(new spriteFW.Animator.KeyPad({
+                    sprite:guy,
+                    name:"keypad",
+                    shift:10,
+                    waitTime:100,
+                    keyTable:ijklKeyPad
+                }));
+
+                return;
+            }
+        </script>
+    </body>
+
+</html>
