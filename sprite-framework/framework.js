@@ -7,7 +7,7 @@
 "use strict";
 
 //Simple Sprite Framework namespace
-function makeSSF()
+function requireSSF()
 {
     var ssf = {};
 

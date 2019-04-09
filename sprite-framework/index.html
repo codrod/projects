@@ -81,7 +81,7 @@
         <script>
             "use strict";
 
-            var spriteFW = makeSSF();
+            var spriteFW = reuireSSF();
 
             //These are just constants
             var tfghKeyPad = [
@@ -124,7 +124,7 @@
 
             function StreetWalker3()
             {
-                var SW3BG = spriteFW.Background({
+                var SW3BG = new spriteFW.Background({
                     parent: document.body,
                     id:"SW3BG",
                     className:"background",
