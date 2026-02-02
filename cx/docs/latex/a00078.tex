@@ -1,0 +1,63 @@
+\hypertarget{a00078}{}\section{/home/tux/dev/cx/examples/exceptions.\+c}
+Examples of exception handling.
+
+
+\begin{DoxyCodeInclude}
+
+\textcolor{preprocessor}{#include <\hyperlink{a00014}{cxlib.h}>}
+
+\textcolor{keywordtype}{int} func();
+
+\textcolor{keywordtype}{int} main()
+\{
+    \_\_cxmain\_\_
+
+    cxtry
+    \{
+        \textcolor{comment}{//All CX exceptions are derived from CXException}
+        cxthrow(CXException);
+    \}
+    cxcatch()
+    \{
+        \textcolor{comment}{//cxexcept is the excpetion caught above}
+        printf(\textcolor{stringliteral}{"caught %s\(\backslash\)n"}, cxexcept.type);
+
+        \textcolor{comment}{//continues}
+    \}
+
+    cxtry
+    \{
+        cxbyte\_t *p = NULL;
+
+        cxbyte\_t b = *p;
+    \}
+    \textcolor{comment}{//Multiple exceptions can be caught including seg faults}
+    cxcatch(CXException\_Signal\_SegFault, CXException\_Memory\_NoMemory)
+    \{
+        printf(\textcolor{stringliteral}{"caught %s\(\backslash\)n"}, cxexcept.type);
+    \}
+
+    cxtry
+    \{
+        func();
+    \}
+    cxcatch(CXException\_Memory\_NoMemory)
+    \{
+        printf(\textcolor{stringliteral}{"caught %s\(\backslash\)n"}, cxexcept.type);
+    \}
+
+    cxreturn 0;
+\}
+
+\textcolor{keywordtype}{int} func()
+\{
+    \textcolor{comment}{//Initialize function}
+    \_\_cxfunc\_\_
+
+    cxthrow(CXException\_Memory\_NoMemory);
+
+    \textcolor{comment}{//Dont forget to use cxreturn not return}
+    cxreturn 0;
+\}
+\end{DoxyCodeInclude}
+ 

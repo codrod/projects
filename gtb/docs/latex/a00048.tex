@@ -1,0 +1,85 @@
+\hypertarget{a00048}{}\section{G\+TB\+:\+:Controller Class Reference}
+\label{a00048}\index{G\+T\+B\+::\+Controller@{G\+T\+B\+::\+Controller}}
+
+
+Collaboration diagram for G\+TB\+:\+:Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{a00046}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00048_a6e66408f89303e9684a4ba88e21212e2}\label{a00048_a6e66408f89303e9684a4ba88e21212e2}} 
+{\bfseries Controller} (\hyperlink{a00044}{Inputer} \&inputer, \hyperlink{a00040}{Outputer} \&outputer)
+\item 
+\mbox{\Hypertarget{a00048_a21117179f6c38e98c5f7f27f92353f56}\label{a00048_a21117179f6c38e98c5f7f27f92353f56}} 
+bool {\bfseries controller} (const Glib\+::\+I\+O\+Condition cond)
+\item 
+\mbox{\Hypertarget{a00048_a917a873c1238b3e84c40492fa2fb8458}\label{a00048_a917a873c1238b3e84c40492fa2fb8458}} 
+Glib\+::\+I\+O\+Status {\bfseries get} (Glib\+::ustring \&seq)
+\item 
+\mbox{\Hypertarget{a00048_a87d9bc4196a63f521a1a26370dc9d599}\label{a00048_a87d9bc4196a63f521a1a26370dc9d599}} 
+int {\bfseries put} (Glib\+::ustring seq)
+\item 
+\mbox{\Hypertarget{a00048_a4c711a4acf28d83caa66de761ef7ce08}\label{a00048_a4c711a4acf28d83caa66de761ef7ce08}} 
+bool {\bfseries scroll} ()
+\item 
+\mbox{\Hypertarget{a00048_ad8b9cbaa251de2d2d6fe57dd02318df8}\label{a00048_ad8b9cbaa251de2d2d6fe57dd02318df8}} 
+Glib\+::ustring {\bfseries exec} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_a947de364ba1bf3d80382241af2655d69}\label{a00048_a947de364ba1bf3d80382241af2655d69}} 
+Glib\+::ustring {\bfseries dcs\+\_\+setup} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_ae464f9974723e995a255ffa06ad0c956}\label{a00048_ae464f9974723e995a255ffa06ad0c956}} 
+Glib\+::ustring {\bfseries dcs\+\_\+move} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_a3d41ede153f82fcdfd97e2065e0e2c8a}\label{a00048_a3d41ede153f82fcdfd97e2065e0e2c8a}} 
+Glib\+::ustring {\bfseries dcs\+\_\+find} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_ad06e95f8672f3b529826ab4bf36fe0f7}\label{a00048_ad06e95f8672f3b529826ab4bf36fe0f7}} 
+Glib\+::ustring {\bfseries dcs\+\_\+scroll} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_ad82a254681cc287a260fd0eeea225804}\label{a00048_ad82a254681cc287a260fd0eeea225804}} 
+Glib\+::ustring {\bfseries dcs\+\_\+insert} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_a138d596d5c6419ce8e7b8fe0a3892dc4}\label{a00048_a138d596d5c6419ce8e7b8fe0a3892dc4}} 
+Glib\+::ustring {\bfseries dcs\+\_\+edit} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_a492baf19b2f0af59cfaa2e6c1d7e0de7}\label{a00048_a492baf19b2f0af59cfaa2e6c1d7e0de7}} 
+Glib\+::ustring {\bfseries dcs\+\_\+clear} (\hyperlink{a00020}{Sequence} seq)
+\item 
+\mbox{\Hypertarget{a00048_a7b77ee0ab4692cf5b787df9018359ecf}\label{a00048_a7b77ee0ab4692cf5b787df9018359ecf}} 
+Glib\+::ustring {\bfseries dcs\+\_\+embed} (\hyperlink{a00020}{Sequence} seq)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00048_a4fc2df37ff31426309ab5b126ed08fe5}\label{a00048_a4fc2df37ff31426309ab5b126ed08fe5}} 
+\hyperlink{a00040}{Outputer} \& {\bfseries outputer}
+\item 
+\mbox{\Hypertarget{a00048_a5da43092c0b6387513d66846127822ac}\label{a00048_a5da43092c0b6387513d66846127822ac}} 
+\hyperlink{a00044}{Inputer} \& {\bfseries inputer}
+\item 
+\mbox{\Hypertarget{a00048_ae6f910dbf841326fae3b4b203be52eda}\label{a00048_ae6f910dbf841326fae3b4b203be52eda}} 
+Glib\+::\+Ref\+Ptr$<$ Glib\+::\+I\+O\+Channel $>$ {\bfseries io\+\_\+channel}
+\item 
+\mbox{\Hypertarget{a00048_acaafbd26faf38b2e2313e4aeabdef4d1}\label{a00048_acaafbd26faf38b2e2313e4aeabdef4d1}} 
+int {\bfseries in}
+\item 
+\mbox{\Hypertarget{a00048_a782ca1e6f668e7c26664e5bf393407cd}\label{a00048_a782ca1e6f668e7c26664e5bf393407cd}} 
+int {\bfseries out}
+\item 
+\mbox{\Hypertarget{a00048_a366878f4a7789d22fe82c89b940b38dc}\label{a00048_a366878f4a7789d22fe82c89b940b38dc}} 
+Gtk\+::\+Text\+Iter {\bfseries scroll\+\_\+pos}
+\item 
+\mbox{\Hypertarget{a00048_a45bc17b8a501934841af9d288a75021c}\label{a00048_a45bc17b8a501934841af9d288a75021c}} 
+sem\+\_\+t $\ast$ {\bfseries lock}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00005}{gtb.\+h}\end{DoxyCompactItemize}

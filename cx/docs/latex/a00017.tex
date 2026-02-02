@@ -1,0 +1,98 @@
+\hypertarget{a00017}{}\section{cxmem.\+h File Reference}
+\label{a00017}\index{cxmem.\+h@{cxmem.\+h}}
+
+
+Memory management.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cxerror.\+h$>$}\newline
+{\ttfamily \#include $<$cxui.\+h$>$}\newline
+{\ttfamily \#include $<$cxdef.\+h$>$}\newline
+{\ttfamily \#include $<$cxrt\+\_\+mutex.\+h$>$}\newline
+Include dependency graph for cxmem.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00056}{cxmem\+\_\+storage}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00017_a71a23f5cbe64e9b426aabef1e04485a1}\label{a00017_a71a23f5cbe64e9b426aabef1e04485a1}} 
+\#define {\bfseries C\+X\+M\+E\+M\+\_\+\+V\+E\+R\+S\+I\+ON}~1000000L
+\item 
+\mbox{\Hypertarget{a00017_ab3c2fc6fb7e39deb7335561f528e0c0c}\label{a00017_ab3c2fc6fb7e39deb7335561f528e0c0c}} 
+\#define {\bfseries C\+X\+M\+E\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+C\+AP}~8
+\item 
+\mbox{\Hypertarget{a00017_a5707b6d44fd77907d5f2acea86cb40bb}\label{a00017_a5707b6d44fd77907d5f2acea86cb40bb}} 
+\#define {\bfseries cxstatic}~(\&C\+X\+M\+E\+M\+\_\+\+S\+T\+A\+T\+IC)
+\item 
+\mbox{\Hypertarget{a00017_a2ab107701ba86364a8b580c2ed01881f}\label{a00017_a2ab107701ba86364a8b580c2ed01881f}} 
+\#define {\bfseries cxthread\+\_\+local}~(\&C\+X\+R\+U\+N\+T\+I\+M\+E.\+storage)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00017_aace66181c4f439c1f67b868f3e930ec1}\label{a00017_aace66181c4f439c1f67b868f3e930ec1}} 
+typedef struct \hyperlink{a00056}{cxmem\+\_\+storage} {\bfseries cxmem\+\_\+storage\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00017_a79f881f6b5d0e7240669c94efdd9a1fe}\label{a00017_a79f881f6b5d0e7240669c94efdd9a1fe}} 
+cxaddress\+\_\+t {\bfseries cxmalloc} (\hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} $\ast$storage, cxsize\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{a00017_ad0e71c095779be36c9f1b59bdb046ce3}\label{a00017_ad0e71c095779be36c9f1b59bdb046ce3}} 
+cxaddress\+\_\+t {\bfseries cxrealloc} (cxaddress\+\_\+t addr, cxsize\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{a00017_aa385ca512cff4b8c301e8a53433717ef}\label{a00017_aa385ca512cff4b8c301e8a53433717ef}} 
+void {\bfseries cxfree} (cxaddress\+\_\+t addr)
+\item 
+\mbox{\Hypertarget{a00017_ad54d278ec209a424cadf8f9fadb12a16}\label{a00017_ad54d278ec209a424cadf8f9fadb12a16}} 
+cxaddress\+\_\+t {\bfseries cxnew} (\hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} $\ast$storage, \hyperlink{a00076}{cxui\+\_\+t} $\ast$ui,...)
+\item 
+\mbox{\Hypertarget{a00017_a3db54ac7c72f2bc05eebe2d4a1af5ba1}\label{a00017_a3db54ac7c72f2bc05eebe2d4a1af5ba1}} 
+void {\bfseries cxdelete} (cxaddress\+\_\+t addr)
+\item 
+\mbox{\Hypertarget{a00017_a82077f7f1f9c7357eab44f2723a5d4b0}\label{a00017_a82077f7f1f9c7357eab44f2723a5d4b0}} 
+cxaddress\+\_\+t {\bfseries cxpush} (cxaddress\+\_\+t address)
+\item 
+\mbox{\Hypertarget{a00017_a88798e8e4491762a9ca0f5b7024a8d4d}\label{a00017_a88798e8e4491762a9ca0f5b7024a8d4d}} 
+void {\bfseries cxpushall} ()
+\item 
+\mbox{\Hypertarget{a00017_abf00dae1b2b6acb3018f47db17101a3c}\label{a00017_abf00dae1b2b6acb3018f47db17101a3c}} 
+cxaddress\+\_\+t {\bfseries cxrestore} (\hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} $\ast$storage, cxaddress\+\_\+t address)
+\item 
+\mbox{\Hypertarget{a00017_a00ca5fd486c44a30fd7632301e9a20b0}\label{a00017_a00ca5fd486c44a30fd7632301e9a20b0}} 
+void {\bfseries cxrestoreall} (\hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} $\ast$new\+\_\+storage, \hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} $\ast$old\+\_\+storage)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00017_a7615933cf4e71b063bbd553a2aa11de2}\label{a00017_a7615933cf4e71b063bbd553a2aa11de2}} 
+\hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} {\bfseries C\+X\+M\+E\+M\+\_\+\+S\+T\+A\+T\+IC}
+\item 
+\mbox{\Hypertarget{a00017_a6e340b69c4d8beb1239b069f21829db6}\label{a00017_a6e340b69c4d8beb1239b069f21829db6}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+Memory}
+\item 
+\mbox{\Hypertarget{a00017_aec270a4fea4eedbfc32521b662268983}\label{a00017_aec270a4fea4eedbfc32521b662268983}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+Memory\+\_\+\+No\+Memory}
+\item 
+\mbox{\Hypertarget{a00017_a062da6eb8e13def13e9519836f17c50a}\label{a00017_a062da6eb8e13def13e9519836f17c50a}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+Memory\+\_\+\+Invalid\+Address}
+\item 
+\mbox{\Hypertarget{a00017_ac4706b050a8612db9e7c45ed2eceff0f}\label{a00017_ac4706b050a8612db9e7c45ed2eceff0f}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+Memory\+\_\+\+Invalid\+Push}
+\item 
+\mbox{\Hypertarget{a00017_a7862241f43b7647161f4c69a60ed2a18}\label{a00017_a7862241f43b7647161f4c69a60ed2a18}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+Memory\+\_\+\+Invalid\+Arg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Memory management. 
+

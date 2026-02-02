@@ -1,4 +1,4 @@
 Projects
 ========
 
-Various small projects
+Various small/old projects

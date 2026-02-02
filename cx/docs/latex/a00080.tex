@@ -1,0 +1,20 @@
+\hypertarget{a00080}{}\section{/home/tux/dev/cx/examples/hello\+\_\+world.\+c}
+A hello world example.
+
+
+\begin{DoxyCodeInclude}
+
+\textcolor{preprocessor}{#include <\hyperlink{a00014}{cxlib.h}>}
+
+\textcolor{keywordtype}{int} main()
+\{
+    \textcolor{comment}{//Initialize the runtime}
+    \_\_cxmain\_\_
+
+    printf(\textcolor{stringliteral}{"Hello World!\(\backslash\)n"});
+
+    \textcolor{comment}{//You must use cxreturn not return}
+    cxreturn 0;
+\}
+\end{DoxyCodeInclude}
+ 

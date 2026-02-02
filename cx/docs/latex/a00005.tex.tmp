@@ -1,0 +1,55 @@
+\hypertarget{a00005}{}\section{cxdef.\+h File Reference}
+\label{a00005}\index{cxdef.\+h@{cxdef.\+h}}
+
+
+Contains defs for basic types used by the entire library.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+Include dependency graph for cxdef.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_a134656a6a11f18770bd91194c04ef3a1}\label{a00005_a134656a6a11f18770bd91194c04ef3a1}} 
+\#define {\bfseries C\+X\+D\+E\+F\+\_\+\+V\+E\+R\+S\+I\+ON}~1000000L
+\item 
+\mbox{\Hypertarget{a00005_aa128abea59de98e1afeab8b9cb543faf}\label{a00005_aa128abea59de98e1afeab8b9cb543faf}} 
+\#define {\bfseries cxdef\+\_\+thread\+\_\+local}~\+\_\+\+\_\+thread
+\item 
+\mbox{\Hypertarget{a00005_a3a582606c401b0cf2dbe4837a29e4273}\label{a00005_a3a582606c401b0cf2dbe4837a29e4273}} 
+\#define {\bfseries C\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX}~L\+L\+O\+N\+G\+\_\+\+M\+AX
+\item 
+\mbox{\Hypertarget{a00005_af66ce45adb64a8471941d8701601d0b9}\label{a00005_af66ce45adb64a8471941d8701601d0b9}} 
+\#define {\bfseries C\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+IN}~L\+L\+O\+N\+G\+\_\+\+M\+IN
+\item 
+\mbox{\Hypertarget{a00005_a45a19165489f89ff4fd2931364eb38b1}\label{a00005_a45a19165489f89ff4fd2931364eb38b1}} 
+\#define {\bfseries C\+X\+\_\+\+U\+S\+I\+Z\+E\+\_\+\+M\+AX}~U\+L\+L\+O\+N\+G\+\_\+\+M\+AX
+\item 
+\mbox{\Hypertarget{a00005_adebd0fc095d60f6cc5fbda71b5b0f25c}\label{a00005_adebd0fc095d60f6cc5fbda71b5b0f25c}} 
+\#define {\bfseries C\+X\+\_\+\+U\+N\+U\+S\+ED}(var)~(void)var
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_a6ad0bec7d93373698ea435d276e790bb}\label{a00005_a6ad0bec7d93373698ea435d276e790bb}} 
+typedef uint8\+\_\+t {\bfseries cxbyte\+\_\+t}
+\item 
+\mbox{\Hypertarget{a00005_ae8b3996d7f96d172fe5a5d1239950f04}\label{a00005_ae8b3996d7f96d172fe5a5d1239950f04}} 
+typedef long long int {\bfseries cxsize\+\_\+t}
+\item 
+\mbox{\Hypertarget{a00005_a211a2172fd6b09394b19b1c84b773ace}\label{a00005_a211a2172fd6b09394b19b1c84b773ace}} 
+typedef unsigned long long int {\bfseries cxusize\+\_\+t}
+\item 
+\mbox{\Hypertarget{a00005_a4be54d0a0bc96f859aeabbfc5dc9fc27}\label{a00005_a4be54d0a0bc96f859aeabbfc5dc9fc27}} 
+typedef void $\ast$ {\bfseries cxaddress\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains defs for basic types used by the entire library. 
+

@@ -1,0 +1,190 @@
+\hypertarget{a00026}{}\section{cxstring.\+h File Reference}
+\label{a00026}\index{cxstring.\+h@{cxstring.\+h}}
+
+
+Strings.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$cxrt.\+h$>$}\newline
+Include dependency graph for cxstring.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00072}{cxstring}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00026_aeac35aa4fb83ef3b146347bb6385a5b0}\label{a00026_aeac35aa4fb83ef3b146347bb6385a5b0}} 
+\#define {\bfseries C\+X\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON}~1000000L
+\item 
+\mbox{\Hypertarget{a00026_ac7d228210f438fd32024f6de3cc0eb77}\label{a00026_ac7d228210f438fd32024f6de3cc0eb77}} 
+\#define {\bfseries C\+X\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+AP}~8
+\item 
+\mbox{\Hypertarget{a00026_aed724d66437ae2f709d39f44e68ef873}\label{a00026_aed724d66437ae2f709d39f44e68ef873}} 
+\#define {\bfseries cxstring\+\_\+includes}~cxstring\+\_\+contains
+\item 
+\mbox{\Hypertarget{a00026_aafb26af310693775a68bdcca40b83966}\label{a00026_aafb26af310693775a68bdcca40b83966}} 
+\#define {\bfseries cxstring\+\_\+remove}~cxstring\+\_\+erase
+\item 
+\mbox{\Hypertarget{a00026_a878e400c242403fc5a2b736e3a1ece69}\label{a00026_a878e400c242403fc5a2b736e3a1ece69}} 
+\#define {\bfseries cxstring\+\_\+search}~cxstring\+\_\+find
+\item 
+\mbox{\Hypertarget{a00026_aa1456f39cf8b871d043bc10bad1e2e7d}\label{a00026_aa1456f39cf8b871d043bc10bad1e2e7d}} 
+\#define {\bfseries cxstring\+\_\+append}~cxstring\+\_\+concat
+\item 
+\mbox{\Hypertarget{a00026_a317d7942f1fd71079f6a6dc11ef6231d}\label{a00026_a317d7942f1fd71079f6a6dc11ef6231d}} 
+\#define {\bfseries cxstring\+\_\+is\+\_\+empty}~cxstring\+\_\+empty
+\item 
+\mbox{\Hypertarget{a00026_afa17d12300611e8985407ea47070df94}\label{a00026_afa17d12300611e8985407ea47070df94}} 
+\#define {\bfseries cxstring\+\_\+substr}~cxstring\+\_\+sub
+\item 
+\mbox{\Hypertarget{a00026_a40d13693bc5add409b6b13601b4fc102}\label{a00026_a40d13693bc5add409b6b13601b4fc102}} 
+\#define {\bfseries cxstring\+\_\+substring}~cxstring\+\_\+sub
+\item 
+\mbox{\Hypertarget{a00026_a173c568ed7201c70ca8c487058d762e2}\label{a00026_a173c568ed7201c70ca8c487058d762e2}} 
+\#define {\bfseries cxstr}(data)~\hyperlink{a00072}{cxstring}(data)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00026_a7c8cb74c1394a3e8b16552d9ca2d2e22}\label{a00026_a7c8cb74c1394a3e8b16552d9ca2d2e22}} 
+typedef struct \hyperlink{a00072}{cxstring} {\bfseries cxstring\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00026_aaf0291b3f4784ea60a958af062950e6b}\label{a00026_aaf0291b3f4784ea60a958af062950e6b}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+construct} (\hyperlink{a00056}{cxmem\+\_\+storage\+\_\+t} $\ast$storage, char $\ast$data, cxsize\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{a00026_aba7437afb6d8f85f32d47c018716043e}\label{a00026_aba7437afb6d8f85f32d47c018716043e}} 
+void {\bfseries cxstring\+\_\+destruct} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_ade4838a89cc9e461f4b4bd6e3c6fbe93}\label{a00026_ade4838a89cc9e461f4b4bd6e3c6fbe93}} 
+void {\bfseries cxstring\+\_\+verify} (\hyperlink{a00072}{cxstring\+\_\+t} $\ast$str)
+\item 
+\mbox{\Hypertarget{a00026_abb8c6b1fe4ae233af6c87658cf80dd30}\label{a00026_abb8c6b1fe4ae233af6c87658cf80dd30}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring} (char $\ast$data)
+\item 
+\mbox{\Hypertarget{a00026_a5d6cd107391b8ee47c8c8ce0c69a8e23}\label{a00026_a5d6cd107391b8ee47c8c8ce0c69a8e23}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+cap} (char $\ast$data, cxsize\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{a00026_a6999a363dd1b66b6f9624f8d8db70a4a}\label{a00026_a6999a363dd1b66b6f9624f8d8db70a4a}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+at} (\hyperlink{a00072}{cxstring\+\_\+t} str, cxsize\+\_\+t i)
+\item 
+\mbox{\Hypertarget{a00026_a2e16727bc4fc1def1ee115678e86291e}\label{a00026_a2e16727bc4fc1def1ee115678e86291e}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+sub} (\hyperlink{a00072}{cxstring\+\_\+t} str, cxsize\+\_\+t i, cxsize\+\_\+t size)
+\item 
+\mbox{\Hypertarget{a00026_af47d5df170c3b7063fd201986ae19f8e}\label{a00026_af47d5df170c3b7063fd201986ae19f8e}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+erase} (\hyperlink{a00072}{cxstring\+\_\+t} str, cxsize\+\_\+t size)
+\item 
+\mbox{\Hypertarget{a00026_a09a551e9c1462b544fd5fdee0643d97f}\label{a00026_a09a551e9c1462b544fd5fdee0643d97f}} 
+cxsize\+\_\+t {\bfseries cxstring\+\_\+size} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_a7343a3c594bfd8dad231453d7dd37aff}\label{a00026_a7343a3c594bfd8dad231453d7dd37aff}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+resize} (\hyperlink{a00072}{cxstring\+\_\+t} $\ast$str, cxsize\+\_\+t size)
+\item 
+\mbox{\Hypertarget{a00026_a39baecb2e2cf07742bb2b3dadf4990d0}\label{a00026_a39baecb2e2cf07742bb2b3dadf4990d0}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+reserve} (\hyperlink{a00072}{cxstring\+\_\+t} $\ast$str, cxsize\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{a00026_ab441e4a21aa272aa037d1ec140195178}\label{a00026_ab441e4a21aa272aa037d1ec140195178}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+clear} (\hyperlink{a00072}{cxstring\+\_\+t} $\ast$str)
+\item 
+\mbox{\Hypertarget{a00026_a634c9663066f29ff9707b8e2d3da2729}\label{a00026_a634c9663066f29ff9707b8e2d3da2729}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+copy} (\hyperlink{a00072}{cxstring\+\_\+t} des, \hyperlink{a00072}{cxstring\+\_\+t} src)
+\item 
+\mbox{\Hypertarget{a00026_aeb237db78af114958984c938dba4f98c}\label{a00026_aeb237db78af114958984c938dba4f98c}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+insert} (\hyperlink{a00072}{cxstring\+\_\+t} des, cxsize\+\_\+t i, \hyperlink{a00072}{cxstring\+\_\+t} src)
+\item 
+\mbox{\Hypertarget{a00026_a39566cb811f44460e07107e8e99c1a33}\label{a00026_a39566cb811f44460e07107e8e99c1a33}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+replace} (\hyperlink{a00072}{cxstring\+\_\+t} des, cxsize\+\_\+t size, \hyperlink{a00072}{cxstring\+\_\+t} src)
+\item 
+\mbox{\Hypertarget{a00026_ac12a5c56e702611eb7c6006f1b691a38}\label{a00026_ac12a5c56e702611eb7c6006f1b691a38}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+concat} (\hyperlink{a00072}{cxstring\+\_\+t} des, \hyperlink{a00072}{cxstring\+\_\+t} src)
+\item 
+\mbox{\Hypertarget{a00026_aefa55d1bdf26f9672a87a004a4536ff8}\label{a00026_aefa55d1bdf26f9672a87a004a4536ff8}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+swap} (\hyperlink{a00072}{cxstring\+\_\+t} $\ast$str1, \hyperlink{a00072}{cxstring\+\_\+t} $\ast$str2)
+\item 
+\mbox{\Hypertarget{a00026_ae82b55379c5523b993f2cd0dc35d8aac}\label{a00026_ae82b55379c5523b993f2cd0dc35d8aac}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+clone} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_af879ce4f5ad5c766d6e85e7091b535c0}\label{a00026_af879ce4f5ad5c766d6e85e7091b535c0}} 
+int {\bfseries cxstring\+\_\+empty} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_a9ab6eca9b23e57aaeb9497bad9f0e780}\label{a00026_a9ab6eca9b23e57aaeb9497bad9f0e780}} 
+int {\bfseries cxstring\+\_\+compare} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_a04b30db16aa250d2693bb2a240c1df6b}\label{a00026_a04b30db16aa250d2693bb2a240c1df6b}} 
+int {\bfseries cxstring\+\_\+equals} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_aa5a66d6c99bbb3d8305334c5a694f096}\label{a00026_aa5a66d6c99bbb3d8305334c5a694f096}} 
+int {\bfseries cxstring\+\_\+starts\+\_\+with} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_aeab236e5406de3a806354d555ac3b9a6}\label{a00026_aeab236e5406de3a806354d555ac3b9a6}} 
+int {\bfseries cxstring\+\_\+ends\+\_\+with} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_ac570d3c2e46b7fd8b110f26afd9ba306}\label{a00026_ac570d3c2e46b7fd8b110f26afd9ba306}} 
+int {\bfseries cxstring\+\_\+contains} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_ab5102cb0231f838e4d55e7dd0e21cdd9}\label{a00026_ab5102cb0231f838e4d55e7dd0e21cdd9}} 
+cxsize\+\_\+t {\bfseries cxstring\+\_\+find} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_aa8ec55f4db6bac0c10db887d97688d61}\label{a00026_aa8ec55f4db6bac0c10db887d97688d61}} 
+cxsize\+\_\+t {\bfseries cxstring\+\_\+span} (\hyperlink{a00072}{cxstring\+\_\+t} str1, \hyperlink{a00072}{cxstring\+\_\+t} str2, int case\+\_\+sensitive)
+\item 
+\mbox{\Hypertarget{a00026_a13c33626c74c9bc0ab4cd08058b19f1f}\label{a00026_a13c33626c74c9bc0ab4cd08058b19f1f}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+trim} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_ac1b5285b5a64bfd1974b906bf00b04f9}\label{a00026_ac1b5285b5a64bfd1974b906bf00b04f9}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+strip} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_a05d7cb78f4e113701f7ebff39643375d}\label{a00026_a05d7cb78f4e113701f7ebff39643375d}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+to\+\_\+lower} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_aabaffed8700bf2131926aa76ed1c6cdd}\label{a00026_aabaffed8700bf2131926aa76ed1c6cdd}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+to\+\_\+upper} (\hyperlink{a00072}{cxstring\+\_\+t} str)
+\item 
+\mbox{\Hypertarget{a00026_a4663bed5e303176831f983df6667d76f}\label{a00026_a4663bed5e303176831f983df6667d76f}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+vprintf} (\hyperlink{a00072}{cxstring\+\_\+t} string, char $\ast$format, va\+\_\+list argv)
+\item 
+\mbox{\Hypertarget{a00026_a7759b8e61f6a384ce0981813a939bbd4}\label{a00026_a7759b8e61f6a384ce0981813a939bbd4}} 
+int {\bfseries cxstring\+\_\+vscanf} (\hyperlink{a00072}{cxstring\+\_\+t} string, char $\ast$format, va\+\_\+list argv)
+\item 
+\mbox{\Hypertarget{a00026_a8099e18ca92bf5534cb2142aa2c4cdb9}\label{a00026_a8099e18ca92bf5534cb2142aa2c4cdb9}} 
+\hyperlink{a00072}{cxstring\+\_\+t} {\bfseries cxstring\+\_\+printf} (\hyperlink{a00072}{cxstring\+\_\+t} string, char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{a00026_a522ebdda1052895d963693f5ed156f71}\label{a00026_a522ebdda1052895d963693f5ed156f71}} 
+int {\bfseries cxstring\+\_\+scanf} (\hyperlink{a00072}{cxstring\+\_\+t} string, char $\ast$format,...)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00026_a643caff68e8ac61182eb782b4e8ffe19}\label{a00026_a643caff68e8ac61182eb782b4e8ffe19}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String}
+\item 
+\mbox{\Hypertarget{a00026_af8b0da91153c365a6ea0521c60809d24}\label{a00026_af8b0da91153c365a6ea0521c60809d24}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String\+\_\+\+Invalid\+Arg}
+\item 
+\mbox{\Hypertarget{a00026_a5a62e9abf565e296eaca7d996f9fdd0f}\label{a00026_a5a62e9abf565e296eaca7d996f9fdd0f}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String\+\_\+\+Invalid\+Pointer}
+\item 
+\mbox{\Hypertarget{a00026_afd5773832287930848fd2d9c6a4b0861}\label{a00026_afd5773832287930848fd2d9c6a4b0861}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String\+\_\+\+Invalid\+Index}
+\item 
+\mbox{\Hypertarget{a00026_a177f51ddbf4e14a2a601c1184e8375d7}\label{a00026_a177f51ddbf4e14a2a601c1184e8375d7}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String\+\_\+\+Invalid\+Size}
+\item 
+\mbox{\Hypertarget{a00026_abdc7440bf9edc0d809a27902856bd312}\label{a00026_abdc7440bf9edc0d809a27902856bd312}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String\+\_\+\+Invalid\+Cap}
+\item 
+\mbox{\Hypertarget{a00026_aa2c7dd02559c16c8e5c74416dbb6d1ac}\label{a00026_aa2c7dd02559c16c8e5c74416dbb6d1ac}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception\+\_\+\+String\+\_\+\+Missing\+Null}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Strings. 
+

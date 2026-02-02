@@ -1,0 +1,70 @@
+\hypertarget{a00040}{}\section{G\+TB\+:\+:Outputer Class Reference}
+\label{a00040}\index{G\+T\+B\+::\+Outputer@{G\+T\+B\+::\+Outputer}}
+
+
+Collaboration diagram for G\+TB\+:\+:Outputer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{a00038}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00040_a1ed68f578cf79072628c058a77ac526f}\label{a00040_a1ed68f578cf79072628c058a77ac526f}} 
+{\bfseries Outputer} (\hyperlink{a00036}{Window} \&win)
+\item 
+\mbox{\Hypertarget{a00040_ab409d72eb7c8d60261e8b451eb3a9031}\label{a00040_ab409d72eb7c8d60261e8b451eb3a9031}} 
+bool {\bfseries outputer} (const Glib\+::\+I\+O\+Condition cond)
+\item 
+\mbox{\Hypertarget{a00040_afcce9d49fc8a6e85e58bc9c10ba78837}\label{a00040_afcce9d49fc8a6e85e58bc9c10ba78837}} 
+Glib\+::\+I\+O\+Status {\bfseries get\+\_\+line} (Glib\+::ustring \&text)
+\item 
+\mbox{\Hypertarget{a00040_ab36a8f86bc8f2dd5d0cebb298c722240}\label{a00040_ab36a8f86bc8f2dd5d0cebb298c722240}} 
+void {\bfseries overwrite} (Glib\+::ustring text)
+\item 
+\mbox{\Hypertarget{a00040_aba4b142594b10391af77d8608a4612a4}\label{a00040_aba4b142594b10391af77d8608a4612a4}} 
+void {\bfseries insert} (Glib\+::ustring text)
+\item 
+\mbox{\Hypertarget{a00040_a331e1caaa2758ba90ef37dd5cd692ace}\label{a00040_a331e1caaa2758ba90ef37dd5cd692ace}} 
+bool {\bfseries scroll} ()
+\item 
+\mbox{\Hypertarget{a00040_a1fdb2e3ec891aa8a1bc323a948176c4f}\label{a00040_a1fdb2e3ec891aa8a1bc323a948176c4f}} 
+Glib\+::\+Ref\+Ptr$<$ Gtk\+::\+Text\+Buffer $>$ {\bfseries apply\+\_\+tags} (Glib\+::ustring line)
+\item 
+\mbox{\Hypertarget{a00040_a35276191a6160fa01cc10814fa31336d}\label{a00040_a35276191a6160fa01cc10814fa31336d}} 
+\hyperlink{a00040}{Outputer} \& {\bfseries move} (\hyperlink{a00024}{coord} pos)
+\item 
+\mbox{\Hypertarget{a00040_a7f603710dea2693773dd6c35e7741c37}\label{a00040_a7f603710dea2693773dd6c35e7741c37}} 
+\hyperlink{a00024}{coord} {\bfseries find} ()
+\item 
+\mbox{\Hypertarget{a00040_ad227daca0305ff2c9851a6be453233c9}\label{a00040_ad227daca0305ff2c9851a6be453233c9}} 
+\hyperlink{a00040}{Outputer} \& {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{a00040_a3a870833afca353df55a645c1368e34e}\label{a00040_a3a870833afca353df55a645c1368e34e}} 
+\hyperlink{a00040}{Outputer} \& {\bfseries clear} (\hyperlink{a00024}{coord} start, \hyperlink{a00024}{coord} end)
+\item 
+\mbox{\Hypertarget{a00040_a5bbb0d66e6ff4812e575ddfb560db585}\label{a00040_a5bbb0d66e6ff4812e575ddfb560db585}} 
+\hyperlink{a00040}{Outputer} \& {\bfseries embed} (Glib\+::ustring path)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00040_aa06ef2d39a55d328bc3b5ab04e9fbb56}\label{a00040_aa06ef2d39a55d328bc3b5ab04e9fbb56}} 
+Glib\+::\+Ref\+Ptr$<$ Glib\+::\+I\+O\+Channel $>$ {\bfseries io\+\_\+channel}
+\item 
+\mbox{\Hypertarget{a00040_acd65a1e5aa62a7196bf446a3b2e1ffe7}\label{a00040_acd65a1e5aa62a7196bf446a3b2e1ffe7}} 
+\hyperlink{a00036}{Window} \& {\bfseries win}
+\item 
+\mbox{\Hypertarget{a00040_aaa74a33fe110ad4d7d17a61b229d5d0f}\label{a00040_aaa74a33fe110ad4d7d17a61b229d5d0f}} 
+int {\bfseries out} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{a00040_a231de93d97ba3685adb6559952747826}\label{a00040_a231de93d97ba3685adb6559952747826}} 
+std\+::vector$<$ \hyperlink{a00032}{Tag\+Area} $>$ {\bfseries open\+\_\+tags}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00005}{gtb.\+h}\end{DoxyCompactItemize}

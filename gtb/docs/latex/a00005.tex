@@ -1,0 +1,146 @@
+\hypertarget{a00005}{}\section{gtb.\+h File Reference}
+\label{a00005}\index{gtb.\+h@{gtb.\+h}}
+
+
+Header file for Gnome Text\+Box.  
+
+
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$semaphore.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+{\ttfamily \#include $<$gdk/gdk.\+h$>$}\newline
+{\ttfamily \#include $<$gdk/gdkkeysyms.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$glibmm/main.\+h$>$}\newline
+{\ttfamily \#include $<$glibmm/iochannel.\+h$>$}\newline
+{\ttfamily \#include $<$glibmm/dispatcher.\+h$>$}\newline
+{\ttfamily \#include $<$gtkmm/application.\+h$>$}\newline
+{\ttfamily \#include $<$gtkmm/applicationwindow.\+h$>$}\newline
+{\ttfamily \#include $<$gtkmm/scrolledwindow.\+h$>$}\newline
+{\ttfamily \#include $<$gtkmm/textview.\+h$>$}\newline
+{\ttfamily \#include $<$gtkmm/textbuffer.\+h$>$}\newline
+Include dependency graph for gtb.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00006}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{a00012}{G\+T\+B\+::\+Error}
+\item 
+class \hyperlink{a00016}{G\+T\+B\+::\+Fatal\+Error}
+\item 
+class \hyperlink{a00020}{G\+T\+B\+::\+Sequence}
+\item 
+class \hyperlink{a00024}{G\+T\+B\+::coord}
+\item 
+class \hyperlink{a00028}{G\+T\+B\+::\+Tag}
+\item 
+class \hyperlink{a00032}{G\+T\+B\+::\+Tag\+Area}
+\item 
+class \hyperlink{a00036}{G\+T\+B\+::\+Window}
+\item 
+class \hyperlink{a00040}{G\+T\+B\+::\+Outputer}
+\item 
+class \hyperlink{a00044}{G\+T\+B\+::\+Inputer}
+\item 
+class \hyperlink{a00048}{G\+T\+B\+::\+Controller}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_ac48c337ccf15cdab391eaae729902b5e}\label{a00005_ac48c337ccf15cdab391eaae729902b5e}} 
+\#define {\bfseries G\+T\+B\+\_\+\+V\+E\+R\+S\+I\+ON}~1000000L
+\item 
+\mbox{\Hypertarget{a00005_a6a761932477b582680bf7fed666c6e61}\label{a00005_a6a761932477b582680bf7fed666c6e61}} 
+\#define {\bfseries D\+C1}~\textquotesingle{}\textbackslash{}021\textquotesingle{}
+\item 
+\mbox{\Hypertarget{a00005_a97a74d0dbbdcf880ce8bc1c375c84c32}\label{a00005_a97a74d0dbbdcf880ce8bc1c375c84c32}} 
+\#define {\bfseries D\+C2}~\textquotesingle{}\textbackslash{}022\textquotesingle{}
+\item 
+\mbox{\Hypertarget{a00005_a4877b26a0217c0449768036b0498e78a}\label{a00005_a4877b26a0217c0449768036b0498e78a}} 
+\#define {\bfseries D\+C3}~\textquotesingle{}\textbackslash{}023\textquotesingle{}
+\item 
+\mbox{\Hypertarget{a00005_a3fba98e4f2b44f2762e20abb6578e0d2}\label{a00005_a3fba98e4f2b44f2762e20abb6578e0d2}} 
+\#define {\bfseries U\+T\+F8\+\_\+\+C\+H\+A\+R\+\_\+\+M\+AX}~6
+\item 
+\mbox{\Hypertarget{a00005_a1ac5b819ce482eb4a63e85c3671dd303}\label{a00005_a1ac5b819ce482eb4a63e85c3671dd303}} 
+\#define {\bfseries C\+H\+L\+D\+\_\+\+N\+U\+LL}~-\/1
+\item 
+\mbox{\Hypertarget{a00005_a33309af6aac10118c1d94f9757602a9b}\label{a00005_a33309af6aac10118c1d94f9757602a9b}} 
+\#define {\bfseries C\+H\+L\+D\+\_\+\+D\+E\+AD}~-\/2
+\item 
+\mbox{\Hypertarget{a00005_a7609549a7df0b2ceee442e50a63dc061}\label{a00005_a7609549a7df0b2ceee442e50a63dc061}} 
+\#define {\bfseries H1\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+I\+ZE}~2.\+0
+\item 
+\mbox{\Hypertarget{a00005_a6d081c052149a4cb72ba8696174dd6d5}\label{a00005_a6d081c052149a4cb72ba8696174dd6d5}} 
+\#define {\bfseries H2\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+I\+ZE}~1.\+5
+\item 
+\mbox{\Hypertarget{a00005_a049f0dd6767e38e4224ca6918ad5b328}\label{a00005_a049f0dd6767e38e4224ca6918ad5b328}} 
+\#define {\bfseries H3\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+I\+ZE}~1.\+17
+\item 
+\mbox{\Hypertarget{a00005_aacd6df83c09dfc4d0c289240f32b2f94}\label{a00005_aacd6df83c09dfc4d0c289240f32b2f94}} 
+\#define {\bfseries H4\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+I\+ZE}~1.\+0
+\item 
+\mbox{\Hypertarget{a00005_aef63dd05d733d24ce42cdff56955d1fb}\label{a00005_aef63dd05d733d24ce42cdff56955d1fb}} 
+\#define {\bfseries H5\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+I\+ZE}~0.\+83
+\item 
+\mbox{\Hypertarget{a00005_ab8d816268208458f38fec00022277704}\label{a00005_ab8d816268208458f38fec00022277704}} 
+\#define {\bfseries H6\+\_\+\+S\+C\+A\+L\+E\+\_\+\+S\+I\+ZE}~0.\+67
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_a2391b249904a79df4d2c8c18807f1f12}\label{a00005_a2391b249904a79df4d2c8c18807f1f12}} 
+void {\bfseries G\+T\+B\+::start\+\_\+handler} ()
+\item 
+\mbox{\Hypertarget{a00005_a21bbd3fc9a78473e3ff815a1173cb3a5}\label{a00005_a21bbd3fc9a78473e3ff815a1173cb3a5}} 
+void {\bfseries G\+T\+B\+::exit\+\_\+handler} ()
+\item 
+\mbox{\Hypertarget{a00005_a4cc5ca0cc64dd02e182a205aa9e43d98}\label{a00005_a4cc5ca0cc64dd02e182a205aa9e43d98}} 
+void $\ast$ {\bfseries G\+T\+B\+::handler} (void $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00005_a5461c31dafd891ad83e4067f7c0f4a2a}\label{a00005_a5461c31dafd891ad83e4067f7c0f4a2a}} 
+pid\+\_\+t {\bfseries G\+T\+B\+::pid}
+\item 
+\mbox{\Hypertarget{a00005_adf9666705cf4df93b7ac84e30e261765}\label{a00005_adf9666705cf4df93b7ac84e30e261765}} 
+pid\+\_\+t {\bfseries G\+T\+B\+::cpid}
+\item 
+\mbox{\Hypertarget{a00005_ad0774f3a41eb220ccdc9a62454107126}\label{a00005_ad0774f3a41eb220ccdc9a62454107126}} 
+pthread\+\_\+t {\bfseries G\+T\+B\+::signal\+\_\+handler}
+\item 
+\mbox{\Hypertarget{a00005_a2547da65375d499a51310ded1bf573ff}\label{a00005_a2547da65375d499a51310ded1bf573ff}} 
+Window $\ast$ {\bfseries G\+T\+B\+::windowp}
+\item 
+\mbox{\Hypertarget{a00005_a4aa97affbe5994c68285edc925c96813}\label{a00005_a4aa97affbe5994c68285edc925c96813}} 
+Outputer $\ast$ {\bfseries G\+T\+B\+::outputerp}
+\item 
+\mbox{\Hypertarget{a00005_acbcc12994db465994d3f1f124aece58f}\label{a00005_acbcc12994db465994d3f1f124aece58f}} 
+Inputer $\ast$ {\bfseries G\+T\+B\+::inputerp}
+\item 
+\mbox{\Hypertarget{a00005_ad22c9e8fc050fba17a9550998ed35a1c}\label{a00005_ad22c9e8fc050fba17a9550998ed35a1c}} 
+Controller $\ast$ {\bfseries G\+T\+B\+::controllerp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for Gnome Text\+Box. 
+

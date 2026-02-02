@@ -1,0 +1,42 @@
+\hypertarget{a00082}{}\section{/home/tux/dev/cx/examples/memory.\+c}
+Examples of memory management
+
+
+\begin{DoxyCodeInclude}
+
+\textcolor{preprocessor}{#include <\hyperlink{a00014}{cxlib.h}>}
+
+cxbyte\_t* func();
+
+\textcolor{keywordtype}{int} main()
+\{
+    \textcolor{comment}{//Initialize the runtime}
+    \_\_cxmain\_\_
+
+    \textcolor{comment}{//All memory stored in cxauto is deallocated on the next cxreturn}
+    cxaddress\_t addr = cxmalloc(cxauto, 1000);
+
+    \textcolor{comment}{//But memory can be moved to another storage after allocation.}
+    \textcolor{comment}{//All memory stored in cxstatic is deallocated when the program exits}
+    cxrestore(cxstatic, addr);
+
+    \textcolor{comment}{//Note that addr may come from malloc or cxmalloc}
+    cxfree(addr);
+
+    printf(\textcolor{stringliteral}{"%p\(\backslash\)n"}, func());
+
+    \textcolor{comment}{//You must use cxreturn not return}
+    cxreturn 0;
+\}
+
+cxbyte\_t* func()
+\{
+    \_\_cxfunc\_\_
+
+    \textcolor{comment}{//We can also return function local memory by pushing it before returning}
+    cxbyte\_t* addr = cxpush(cxmalloc(cxauto, 1000));
+
+    cxreturn addr;
+\}
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,69 @@
+\hypertarget{a00011}{}\section{cxex.\+h File Reference}
+\label{a00011}\index{cxex.\+h@{cxex.\+h}}
+
+
+Exception handling.  
+
+
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include $<$cxdef.\+h$>$}\newline
+{\ttfamily \#include $<$cxerror.\+h$>$}\newline
+Include dependency graph for cxex.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00048}{cxexception}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00011_a099d212cb0554607ddc5f97f459108f8}\label{a00011_a099d212cb0554607ddc5f97f459108f8}} 
+\#define {\bfseries C\+X\+E\+X\+\_\+\+V\+E\+R\+S\+I\+ON}~1000000L
+\item 
+\mbox{\Hypertarget{a00011_a07394dfadb1e836bb044fd133a0b5fdc}\label{a00011_a07394dfadb1e836bb044fd133a0b5fdc}} 
+\#define {\bfseries cxtry}~if(!cxex\+\_\+setjmp($\ast$C\+X\+E\+X\+\_\+\+T\+RY())) \{
+\item 
+\mbox{\Hypertarget{a00011_a5d2ea9622f3bd15d8e8489663e04b11b}\label{a00011_a5d2ea9622f3bd15d8e8489663e04b11b}} 
+\#define {\bfseries cxcatch}(...)~C\+X\+E\+X\+\_\+\+E\+N\+D\+\_\+\+T\+RY(); \} else if(C\+X\+E\+X\+\_\+\+C\+A\+T\+CH(0, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+, (\hyperlink{a00048}{cxexception\+\_\+t})\{\}))
+\item 
+\mbox{\Hypertarget{a00011_a6eb910a21c7df5cfaef2b0283101205d}\label{a00011_a6eb910a21c7df5cfaef2b0283101205d}} 
+\#define {\bfseries cxthrow\+\_\+ret}(ex,  ret)~cxex\+\_\+longjmp($\ast$C\+X\+E\+X\+\_\+\+T\+H\+R\+OW(ex, ret), 1)
+\item 
+\mbox{\Hypertarget{a00011_a868460d46c56b694c6aa3f18464c9c4d}\label{a00011_a868460d46c56b694c6aa3f18464c9c4d}} 
+\#define {\bfseries cxthrow}(ex)~cxthrow\+\_\+ret(ex, 0)
+\item 
+\mbox{\Hypertarget{a00011_aaac72ecb8338617ac54c2e50334d92ef}\label{a00011_aaac72ecb8338617ac54c2e50334d92ef}} 
+\#define {\bfseries cxex\+\_\+setjmp}(jump)~sigsetjmp(jump, 1)
+\item 
+\mbox{\Hypertarget{a00011_a4ec477263777d3fa887e5451b3ec14f5}\label{a00011_a4ec477263777d3fa887e5451b3ec14f5}} 
+\#define {\bfseries cxex\+\_\+longjmp}~siglongjmp
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00011_a6a643c4c3fe776c4e158afba6ac87c7a}\label{a00011_a6a643c4c3fe776c4e158afba6ac87c7a}} 
+typedef struct \hyperlink{a00048}{cxexception} {\bfseries cxexception\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00011_a12358a045dfda6e1f68e043ee6fd0f4b}\label{a00011_a12358a045dfda6e1f68e043ee6fd0f4b}} 
+int {\bfseries cxex\+\_\+istype} (\hyperlink{a00048}{cxexception\+\_\+t} except, \hyperlink{a00048}{cxexception\+\_\+t} other)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00011_afd15a1d98ac79a209f475756608bf619}\label{a00011_afd15a1d98ac79a209f475756608bf619}} 
+cxdef\+\_\+thread\+\_\+local \hyperlink{a00048}{cxexception\+\_\+t} {\bfseries cxexcept}
+\item 
+\mbox{\Hypertarget{a00011_ac73de8289fd5bc03032a3725c501dca1}\label{a00011_ac73de8289fd5bc03032a3725c501dca1}} 
+\hyperlink{a00048}{cxexception\+\_\+t} {\bfseries C\+X\+Exception}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exception handling. 
+
